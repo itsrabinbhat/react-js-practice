@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTitle } from "../hooks/useTitle";
 
 const HomePage = () => {
+  useTitle("Home");
   return (
     <div>
       <h2>Manage Users:</h2>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { handleChange, updateUser } from "../functions/handleData";
+import { useTitle } from "../hooks/useTitle";
 
 const UpdateUsers = () => {
+  useTitle("Update Users");
   const [userData, setUserData] = useState({});
   return (
     <div>

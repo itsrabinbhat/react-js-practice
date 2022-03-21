@@ -3,8 +3,10 @@ import "./components.css";
 import { Link } from "react-router-dom";
 import { handleChange, addUser } from "../functions/handleData";
 import { useState } from "react";
+import { useTitle } from "../hooks/useTitle";
 
 const AddUsers = () => {
+  useTitle("Add Users");
   const [userData, setUserData] = useState({});
   return (
     <div>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchUsers } from "../functions/handleData";
+import { useTitle } from "../hooks/useTitle";
 
 const FetchUsers = () => {
+  useTitle("Fetch Users");
   const [fetchedUsers, setFetchedUsers] = useState([]);
   return (
     <>

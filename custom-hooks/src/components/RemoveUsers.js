@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { handleChange, removeUser } from "../functions/handleData";
+import { useTitle } from "../hooks/useTitle";
 
 const RemoveUsers = () => {
+  useTitle("Remove Users");
   const [userData, setUserData] = useState({});
   return (
     <div>
