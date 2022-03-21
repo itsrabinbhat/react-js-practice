@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Open+Sans:wght@300;400&display=swap");
+body {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Open Sans";
+  overflow-x: hidden;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container button {
+  width: 100%;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
