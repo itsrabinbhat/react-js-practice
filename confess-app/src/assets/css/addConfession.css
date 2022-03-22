@@ -1,0 +1,45 @@
+.add-confession-container {
+  border: 1px solid #ff7675;
+  min-width: 400px;
+  width: 40%;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 55px;
+  /* box-shadow: 1px 2px 6px #888; */
+}
+
+textArea {
+  min-height: 150px;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  resize: none;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #ff7675;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px #888;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+small {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}

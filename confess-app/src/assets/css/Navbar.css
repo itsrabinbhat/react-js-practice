@@ -1,0 +1,19 @@
+.container {
+  /* background-color: #555; */
+  background-color: #ff7675;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 3px 3px 6px #ccc;
+}
+.navbar {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbar h2 {
+  font-weight: 600;
+}

@@ -1,0 +1,35 @@
+.confessions {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 55px;
+}
+
+.confession {
+  border: 1px solid #ff7675;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  min-width: 200px;
+  max-width: 30%;
+  min-height: 200px;
+  margin: 5px auto;
+  position: relative;
+}
+
+.date {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.confess {
+  margin: 10px 0;
+}
+
+.time-ago {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 14px;
+  opacity: 0.7;
+}
