@@ -24,7 +24,15 @@ const App = () => {
         </Routes>
       </BrowserRouter>
 
-      <div style={{ color: "#fff", position: "absolute", marginTop: "50%" }}>
+      <div
+        style={{
+          color: "#fff",
+          position: "absolute",
+          marginTop: "50%",
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+      >
         {isFetched
           ? fetchedData.map((user, idx) => {
               return (
