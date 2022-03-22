@@ -6,8 +6,12 @@ import AddUsers from "./components/AddUsers";
 import UpdateUsers from "./components/UpdateUsers";
 import FetchUsers from "./components/FetchUsers";
 import RemoveUsers from "./components/RemoveUsers";
+import useFetch from "./hooks/useFetch";
 
 const App = () => {
+  const [isFetched, fetchedData] = useFetch(
+    "https://jsonplaceholder.typicode.com/users"
+  );
   return (
     <div>
       <BrowserRouter>
@@ -19,6 +23,28 @@ const App = () => {
           <Route path="FetchUsers" element={<FetchUsers />} />
         </Routes>
       </BrowserRouter>
+
+      <div style={{ color: "#fff", position: "absolute", marginTop: "50%" }}>
+        {isFetched
+          ? fetchedData.map((user, idx) => {
+              return (
+                <div
+                  key={idx}
+                  style={{
+                    padding: "5px",
+                    textAlign: "left",
+                    border: "1px dashed #fff",
+                    margin: "5px",
+                  }}
+                >
+                  Name: {user.name}
+                  <br />
+                  Email: {user.email}
+                </div>
+              );
+            })
+          : null}
+      </div>
     </div>
   );
 };
