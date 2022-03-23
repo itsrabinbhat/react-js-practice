@@ -1,7 +1,9 @@
 import React from "react";
 import "../assets/css/aboutus.css";
+import useTitle from "../hooks/useTitle";
 
 const AboutUs = () => {
+  useTitle("Confession | About Us");
   return (
     <div className="about-us">
       <center>
