@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "../assets/css/addConfession.css";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import { database, ref, set } from "../config/firebaseConfig";
 import { ToastContainer, toast } from "react-toast";
 import { FaLock } from "react-icons/fa";
-// import ConfessionList from "./ConfessionList";
 
 const AddConfession = () => {
   const [confession, setConfession] = useState();
@@ -42,8 +41,6 @@ const AddConfession = () => {
       </small>
 
       <ToastContainer delay={1500} />
-
-      {/* <ConfessionList /> */}
     </center>
   );
 };

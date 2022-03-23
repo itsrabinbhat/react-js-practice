@@ -1,15 +1,20 @@
 import React from "react";
-import AddConfession from "./components/AddConfession";
-import ConfessionList from "./components/ConfessionList";
 import Nabvar from "./components/Nabvar";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Nabvar />
-      <AddConfession />
-      <ConfessionList />
-    </div>
+      <Routes>
+        <Route index element={<Homepage />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+      </Routes>{" "}
+      <Footer />
+    </Router>
   );
 };
 

@@ -3,27 +3,28 @@ import { database, ref, onValue } from "../config/firebaseConfig";
 import "../assets/css/confessionList.css";
 import Moment from "react-moment";
 
-const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-
 const ConfessionList = () => {
   const [confessionList, setConfessionList] = useState([]);
+
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
   useEffect(() => {
-    let _confessionList = [];
     onValue(ref(database, "Confessions"), (snapshot) => {
       let _data = snapshot.val();
+      let _confessionList = [];
 
       for (let idx in _data) {
         _confessionList.push(_data[idx]);
@@ -50,7 +51,7 @@ const ConfessionList = () => {
                 </div>
               );
             })
-          : console.log("loading..")}
+          : "Loading.."}
       </div>
     </center>
   );
